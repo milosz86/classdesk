@@ -1,2 +1,0 @@
-# classdesk
-First Serious
