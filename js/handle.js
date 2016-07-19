@@ -44,31 +44,33 @@ $.ajax({
      Okno.appendChild(mainDiv);
      subsDiv.style.display="none";
 
-     headerDiv.onclick = function() {
-     a = this.id;
-     b = a.slice(3);
-     var url = decodeURIComponent(response[b].url);
-     var aktHeader = document.getElementById("pst"+b);
-     var aktLeftSub = aktHeader.nextSibling.firstChild;
-     var aktSub = aktHeader.nextSibling;
+     headerDiv.onclick = toggleSection(this.id);
 
-     if(aktSub.style.display =="none"){
-     if (!aktLeftSub.firstChild) {
-       aktSub.style.display ="initial";
-     var leftNode = document.createElement("iframe");
-     leftNode.setAttribute("src", url);
-     leftNode.setAttribute("width", "560");
-     leftNode.setAttribute("height", "315");
-     leftNode.setAttribute("frameborder", "0");
-     leftNode.setAttribute("allowfullscreen", "true");
-       aktLeftSub.appendChild(leftNode);
-     }
-     else {aktSub.style.display ="initial";}
-   }
-     else {aktSub.style.display ="none";}
-   };
   }
     }
 
       });
+    }
+    function toggleSection(a) {
+
+      b = a.slice(3);
+      var url = decodeURIComponent(response[b].url);
+      var aktHeader = document.getElementById("pst"+b);
+      var aktLeftSub = aktHeader.nextSibling.firstChild;
+      var aktSub = aktHeader.nextSibling;
+
+      if(aktSub.style.display =="none"){
+      if (!aktLeftSub.firstChild) {
+        aktSub.style.display ="initial";
+      var leftNode = document.createElement("iframe");
+      leftNode.setAttribute("src", url);
+      leftNode.setAttribute("width", "560");
+      leftNode.setAttribute("height", "315");
+      leftNode.setAttribute("frameborder", "0");
+      leftNode.setAttribute("allowfullscreen", "true");
+        aktLeftSub.appendChild(leftNode);
+      }
+      else {aktSub.style.display ="initial";}
+    }
+      else {aktSub.style.display ="none";}
     }
