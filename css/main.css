@@ -1,0 +1,52 @@
+body {
+	margin:0;
+	padding:0;
+	background-color: gold;
+}
+
+div {
+	padding:0;
+	margin:0;
+}
+
+div#wpis {
+	width: 100%;
+}
+
+
+div.pstMainDiv {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;
+	width: 100%;
+	background-color: blue;
+	clear: both;
+}
+div.pstHeaderDiv {
+	float: left;
+	width: 100%;
+	background-color: green;
+}
+div.pstSubsDiv {
+	position: relative;
+    width: 100%;
+    background-color: red;
+
+
+}
+div.pstLeftSubDiv {
+
+	position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48%;
+    left: 1%;
+}
+div.pstRightSubDiv {
+	background-color: white;
+	position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48%;
+    left: 1%;
+}
